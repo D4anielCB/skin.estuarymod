@@ -252,6 +252,29 @@
 					</control>
 				</control>
 			</control>
+			<control type="group">
+				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<control type="label">
+					<right>24</right>
+					<top>106</top>
+					<width>800</width>
+					<height>100</height>
+					<align>right</align>
+					<itemgap>5</itemgap>
+					<label>$INFO[VideoPlayer.VideoResolution, ]p</label>
+					<control type="image">
+						<top>2</top>
+						<left>0</left>
+						<width>60</width>
+						<height>40</height>
+						<fadetime>300</fadetime>
+						<visible>Player.Muted</visible>
+						<visible>!String.isempty(Player.Duration)</visible>
+						<visible>Player.HasVideo + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
+					</control>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

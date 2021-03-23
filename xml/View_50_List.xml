@@ -165,7 +165,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -207,7 +207,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<textcolor>grey</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -239,7 +239,7 @@
 					<height>470</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<texture fallback="$PARAM[fallback_image]" background="true">$INFO[Listitem.Icon]</texture>
 					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
