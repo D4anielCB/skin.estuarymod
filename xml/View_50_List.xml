@@ -50,7 +50,7 @@
 						<height>850</height>
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
-						<aspectratio aligny="bottom">keep</aspectratio>
+						<aspectratio aligny="center">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
@@ -239,7 +239,7 @@
 					<height>470</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture fallback="$PARAM[fallback_image]" background="true">$INFO[Listitem.Icon]</texture>
+					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
