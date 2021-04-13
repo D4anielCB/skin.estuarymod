@@ -186,6 +186,30 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7900"/>
 						</include>
+						<include content="WidgetListPoster">
+							<param name="content_path" value="plugin://plugin.video.CubePlayMeta/?name=%5BCOLOR+blue%5D%5BB%5D%5BAnimesvision+Fav%5D%5B%2FB%5D%5B%2FCOLOR%5D&url=&mode=508&iconimage=&logos=https%3A%2F%2Fckneiferinstructional.files.wordpress.com%2F2010%2F12%2Ftv-shows-completed1.jpg&cache=0&index=&info=&background=None&DL=&year=&metah=%7B%7D&episode=&playcount=None"/>
+							<param name="widget_header" value="AnimesVision (Autoplay)"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6600"/>
+						</include>
+						<include content="WidgetListPoster">
+							<param name="content_path" value="plugin://plugin.video.CubePlayMeta/?name=%5BCOLOR+blue%5D%5BB%5D%5BCrunchyroll+Fav%5D%5B%2FB%5D%5B%2FCOLOR%5D&url=&mode=538&iconimage=&logos=https%3A%2F%2Fckneiferinstructional.files.wordpress.com%2F2010%2F12%2Ftv-shows-completed1.jpg&cache=0&index=&info=&background=None&DL=&year=&metah=%7B%7D&episode=&playcount=None"/>
+							<param name="widget_header" value="Crunchyroll (Autoplay)"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6602"/>
+						</include>
+						<include content="WidgetListPoster">
+							<param name="content_path" value="plugin://plugin.video.CubePlayMeta/?name=%5BCOLOR+blue%5D%5BB%5D%5BAnimesvision+Fav%5D%5B%2FB%5D%5B%2FCOLOR%5D&url=&mode=512&iconimage=&logos=https%3A%2F%2Fckneiferinstructional.files.wordpress.com%2F2010%2F12%2Ftv-shows-completed1.jpg&cache=0&index=&info=&background=None&DL=&year=&metah=%7B%7D&episode=&playcount=None"/>
+							<param name="widget_header" value="AnimesVision (Episódios)"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6604"/>
+						</include>
+						<include content="WidgetListPoster">
+							<param name="content_path" value="plugin://plugin.video.CubePlayMeta/?name=%5BCOLOR+blue%5D%5BB%5D%5BCrunchyroll+Fav%5D%5B%2FB%5D%5B%2FCOLOR%5D&url=&mode=539&iconimage=&logos=https%3A%2F%2Fckneiferinstructional.files.wordpress.com%2F2010%2F12%2Ftv-shows-completed1.jpg&cache=0&index=&info=&background=None&DL=&year=&metah=%7B%7D&episode=&playcount=None"/>
+							<param name="widget_header" value="Crunchyroll (Episódios)"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6606"/>
+						</include>
 						<include content="WidgetListSquare" condition="Library.HasContent(music)">
 							<param name="content_path" value="musicdb://recentlyplayedalbums"/>
 							<param name="widget_header" value="$LOCALIZE[517]"/>
@@ -231,13 +255,6 @@
 							<param name="sortorder" value="descending"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!Library.HasContent(music)">
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
-						<param name="button_onclick" value="ActivateWindow(music,files)"/>
-						<param name="button_id" value="7600"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="7010"/>
 					</include>
