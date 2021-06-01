@@ -204,7 +204,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<visible></visible>
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
@@ -253,7 +253,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<visible></visible>
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<right>24</right>
