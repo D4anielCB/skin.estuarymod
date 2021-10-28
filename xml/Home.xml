@@ -461,13 +461,7 @@
 							<param name="list_id" value="6700"/>
 						</include>
 					</control>
-					<include content="ImageWidget" condition="!System.HasPVRAddon">
-						<param name="text_label" value="$LOCALIZE[31143]" />
-						<param name="button_label" value="$LOCALIZE[31144]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://all/kodi.pvrclient,return)"/>
-						<param name="button_id" value="13400"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
-					</include>
+
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="13010"/>
 					</include>
