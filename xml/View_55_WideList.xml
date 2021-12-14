@@ -52,7 +52,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 				</focusedlayout>
@@ -80,7 +80,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 				</itemlayout>

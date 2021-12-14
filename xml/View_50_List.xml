@@ -50,7 +50,7 @@
 						<height>850</height>
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
-						<aspectratio aligny="bottom">keep</aspectratio>
+						<aspectratio aligny="center">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
@@ -165,7 +165,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -207,7 +207,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$INFO[ListItem.Rating]</label>
 						<textcolor>grey</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>

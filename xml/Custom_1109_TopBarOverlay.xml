@@ -7,7 +7,7 @@
 	<zorder>0</zorder>
 	<controls>
 		<control type="group">
-			<visible>!Skin.HasSetting(show_seekbar_at_bottom) + ![Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)] + [!String.IsEmpty(Player.SeekNumeric) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused]</visible>
+			<visible>![Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)] + [!String.IsEmpty(Player.SeekNumeric) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused]</visible>
 			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
 			<animation effect="slide" start="0,0" end="0,-80" time="300" condition="Player.Paused + System.IdleTime(5)">Conditional</animation>
 			<control type="image">
@@ -148,7 +148,7 @@
 		<control type="group">
 			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 			<animation effect="slide" start="0,-200" end="0,0" time="300" tween="cubic" easing="out">VisibleChange</animation>
-			<visible>Skin.HasSetting(show_seekbar_at_bottom) | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide) + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused]</visible>
+			<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide) + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused]</visible>
 			<depth>DepthBars</depth>
 			<control type="image">
 				<left>0</left>
@@ -204,7 +204,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<visible></visible>
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
@@ -249,6 +249,29 @@
 						<aspectratio aligny="center" align="right">keep</aspectratio>
 						<texture>dialogs/volume/mute.png</texture>
 						<visible>Player.Muted</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible></visible>
+				<animation effect="fade" time="150">VisibleChange</animation>
+				<control type="label">
+					<right>24</right>
+					<top>106</top>
+					<width>800</width>
+					<height>100</height>
+					<align>right</align>
+					<itemgap>5</itemgap>
+					<label>$INFO[VideoPlayer.VideoResolution, ]p</label>
+					<control type="image">
+						<top>2</top>
+						<left>0</left>
+						<width>60</width>
+						<height>40</height>
+						<fadetime>300</fadetime>
+						<visible>Player.Muted</visible>
+						<visible>!String.isempty(Player.Duration)</visible>
+						<visible>Player.HasVideo + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
 					</control>
 				</control>
 			</control>
